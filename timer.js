@@ -8,8 +8,7 @@
 
 const timeSet = process.argv.splice(2);
 for (let time of timeSet) {
-  if (!isNaN(time) && time > 0) {
-  // console.log(`Time set @: ${time} secs`);
+  if (!isNaN(time) && time > 0 && typeof(time !== 'number')) {
     setTimeout(() => { 
       process.stdout.write('\x07'); 
     }, time * 1000,
